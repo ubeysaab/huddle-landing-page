@@ -9,7 +9,7 @@
 
 ### Links
 
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://ubeysaab.github.io/huddle-landing-page/)
 
 ## My process
 
