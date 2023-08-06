@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+/* common styles  */
+
+/* TODO: TEXT WRAPPING INSIDE ALL OF THE TEXT DIVS  */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  /* border: 1px solid red ; */
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--veryDarkCyan);
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  /* width: 35ch; */
+  font-weight: 600;
+  color: var(--veryDarkCyan);
+  text-wrap: balance;
+}
+input:focus {
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --LightPink: hsl(321, 100%, 78%);
+  --LightRed: hsl(0, 100%, 63%);
+  --veryPaleBlue: hsl(207, 100%, 98%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+}
+
+.header {
+  /* border: 1px solid red; */
+
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-image {
+  width: 30vw;
+  height: 20px;
+}
+
+.header-button {
+  color: var(--Pink);
+  width: 30vw;
+  text-align: center;
+  border: 1px solid var(--Pink);
+  padding: 0 10px;
+  border-radius: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.header-button:hover {
+  background-color: var(--Pink);
+  color: white;
+  font-size: 18px;
+}
+
+/* body start here  */
+.body {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.body-container {
+  width: 70%;
+  height: 70dvh;
+  padding: 100px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body-h1 {
+  text-transform: capitalize;
+}
+/*  */
+.body-button {
+  background-color: var(--Pink);
+  color: white;
+  padding: 15px 10px;
+  width: 50vw;
+  text-align: center;
+  border-radius: 30px;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400px;
+}
+.body-text {
+  text-wrap: balance;
+}
+
+/*? second page  */
+.second-page {
+  padding-bottom: 100px;
+}
+.second-page img {
+  display: block;
+  margin: 120px auto;
+  max-width: 80%;
+}
+
+.second-page-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.communities,
+.messages {
+  margin: 30px 0;
+  position: relative;
+  text-align: center;
+  padding: 35px;
+  /* border: 1px solid black ; */
+}
+
+.second-page-txt p {
+  opacity: 0.3;
+}
+
+.second-page-txt h1 {
+  font-size: 5rem;
+  /* margin: 2%; */
+  font-family: "Open Sans", sans-serif;
+}
+
+.communities ::before {
+  content: url(./images/icon-communities.svg);
+  position: absolute;
+
+  top: -25%;
+  left: 30px;
+}
+
+.messages ::before {
+  content: url("./images/messages2.svg");
+  position: absolute;
+
+  top: -25%;
+  left: 30px;
+}
+
+.messages ::after {
+  content: "Messages \a Sent";
+
+  white-space: pre-wrap;
+  position: absolute;
+  left: 50%;
+  opacity: 0.6;
+  font-size: 1rem;
+
+  /* top: 0; but here is working  */
+  bottom: 0;
+
+  margin-left: -35px;
+}
+
+.communities ::after {
+  content: "Communities Formed ";
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  opacity: 0.6;
+  font-size: 1rem;
+
+  bottom: 0;
+
+  margin-left: -85px;
+}
+
+/*? third section */
+
+.third-section {
+  background-color: var(--veryPaleBlue);
+  position: relative;
+  padding: 120px 0;
+}
+
+.image-box {
+  width: 70%;
+  margin: 0 auto 40px auto;
+}
+.grow-img {
+  max-width: 100%;
+}
+
+.grow-text {
+  margin: 0 auto 50px;
+  text-align: center;
+  width: 80%;
+  padding: 5px;
+}
+
+.grow-text h2 {
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.grow-text p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: var(--veryDarkCyan);
+}
+
+.third-section::after {
+  display: block;
+  /* border: 1px solid red; */
+  position: absolute;
+  content: url("./images/mobile/first.svg");
+  top: -100px;
+  width: 100%;
+}
+
+/* adding space  before ::after or ::before is the reason why it choose all element inside it  */
+
+/*? forth section  */
+.forth-page {
+  position: relative;
+  padding: 75px 0;
+}
+.forth-page img {
+  width: 100%;
+}
+.forth-page::before {
+  display: block;
+  width: 100%;
+  /* border: 1px solid red; */
+  content: url("./images/mobile/follwingTop.svg");
+  position: absolute;
+  top: -20px;
+}
+
+/* ?fifth section */
+.fifth-page {
+  background-color: var(--veryPaleBlue);
+  position: relative;
+  padding: 90px 0;
+}
+
+.last-text {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+.btn {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.fifth-page::after {
+  /* border:1px solid red; */
+  content: url("./images/mobile/flowingBot.svg");
+  position: absolute;
+  top: -90px;
+}
+.last-page {
+  position: relative;
+  /* border: 1px solid black; */
+}
+
+.last-page::before {
+  content: url("./images/mobile/BuildCommuntiytop.svg");
+  position: absolute;
+
+  /* border: 1px solid red ; */
+  top: -2px;
+}
+/*? Footer  */
+
+.footer {
+  background-color: var(--veryDarkCyan);
+  position: relative;
+  padding-top: 40px;
+}
+.footer h1,
+.footer h2,
+.footer p {
+  color: white;
+}
+.footer::before {
+  position: absolute;
+  content: url("./images/mobile/bg-footer-top-mobile.svg");
+  /* border: 1px solid red ; */
+  top: -50px;
+}
+
+.up {
+  padding: 20px;
+}
+
+.email-input {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#input {
+  width: 100%;
+  line-height: 40px;
+  border-radius: 9px;
+}
+
+.footer-btn {
+  width: 50%;
+  margin: 10px 0 0 0;
+  border-radius: 9px;
+}
+
+.up p {
+  margin-bottom: 20px;
+}
+
+.up h2 {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+/** how to control spaces between the lines  */
+.down {
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  /* height: 500px; */
+}
+.down p {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.huddle {
+  width: auto;
+  display: flex;
+  text-indent: 20px;
+  margin: 20px 0;
+
+  align-items: center;
+}
+
+.huddle p {
+  margin: 0;
+}
+
+.icons {
+  width: 100%;
+  margin-top: 20px;
+}
+.icons i {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+}
+
+button {
+  outline: none;
+}
+
+/* .first-page,.second-page,.third-section,.forth-page,.fifth-page,.footer{
+  overflow: hidden;
+}
+ */
+
+@media only screen and (min-width: 375px) {
+  .first-page {
+    width: 100dvw;
+    height: auto;
+  }
+
+  .header-image {
+    width: 20vw;
+  }
+  .header-button {
+    width: 13vw;
+  }
+
+  .body-container {
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+
+    height: auto;
+  }
+  .body-h1,
+  .body-text,
+  .body-button {
+    margin-bottom: 15px;
+  }
+  .body-h1,
+  .last-text h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .body-text {
+    width: 60ch;
+  }
+
+  .body-button {
+    width: 25vw;
+  }
+
+  .second-page img {
+    margin: 40px auto;
+  }
+  .second-page-txt {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin-bottom: 10px;
+  }
+
+  .image-box {
+    width: 50%;
+  }
+
+  .third-section,
+  .footer,
+  .fifth-page {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer {
+    align-items: flex-start;
+  }
+
+  .forth-page {
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .grow-text {
+    text-align: start;
+    padding-left: 20px;
+    width: 75ch;
+  }
+  .grow-text h2 {
+    margin: 0;
+    margin: 20px 0;
+  }
+
+  .third-section::after {
+    content: url("./images/desktop/first.svg");
+    top: -160px;
+    /* border: 1px solid red; */
+  }
+
+  .forth-page::before {
+    content: url("./images/desktop/Second2.svg");
+
+    top: -133px;
+  }
+  .fifth-page::after {
+    content: url("./images/desktop/4.svg");
+    top: -120px;
+  }
+  .last-page::before {
+    content: url("./images/desktop/5.svg");
+    top: 0;
+  }
+
+  .footer::before {
+    content: url("./images/desktop/bg-footer-top-desktop.svg");
+    top: -150px;
+  }
+
+  .email-input {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .email-input button {
+    padding: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .up {
+    width: 50%;
+  }
+  .down {
+    width: 30%;
+    padding-top: 0;
+  }
+
+  .huddle1 {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
