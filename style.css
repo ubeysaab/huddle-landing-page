@@ -396,7 +396,7 @@ button {
 }
  */
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 420px) {
   .first-page {
     width: 100dvw;
     height: auto;
@@ -529,3 +529,11 @@ button {
     margin-bottom: 20px;
   }
 }
+
+/* what i have learned from this project
+
+
+/* important links  
+
+
+*/
